@@ -1,0 +1,194 @@
+/* CSS StyleSheet */
+body{
+background-color: #fff;
+color:#222;
+height:100%;
+width:100%;
+margin:0;
+font-family: ariel, sans-serif;
+
+}
+
+ul
+{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul > li
+{
+	display:inline-block;
+	margin-left:10px;
+	padding-left:10px;
+}
+
+ul > li > a
+{
+	display:block;
+	text-align:center;
+	text-decoration:none;
+	font-size:small;
+	color: #222;
+	padding: 3px;
+}
+ul > li > a:hover
+{
+	text-decoration: underline;
+}
+
+#nav
+{
+height:60px;
+width: 100%;
+
+top:0;
+clear:both;
+}
+
+.links 
+{
+	height:60px;
+	line-height:58px;
+	vertical-align:middle;
+	float:right;
+	margin-right:10px;
+	
+}
+
+.first-icon
+{
+	background-image: url('../img/all.png');
+	background-position: -326px -52px;
+	height:30px;
+	width:30px;
+	vertical-align:middle;
+	opacity: 0.6;
+	padding-left:inherit;
+}
+
+.second-icon
+{
+	background-image: url('../img/all.png');
+	background-position: -214px -116px;
+	background-color: rgba(0,0,0,.55);
+	height:20px;
+	width:20px;
+	border-radius:50%;
+	vertical-align:middle;
+	opacity: 0.6;
+	padding-left:inherit;
+}
+
+
+.third-icon
+{
+	background-image: url('../img/all.png');
+	background-position: -326px -17px;
+	height:30px;
+	width:30px;
+	vertical-align:middle;
+	opacity: 0.6;
+	padding-left:inherit;
+}
+
+.pp-icon
+{
+	background-image: url('../img/photo.jpg');
+	height:30px;
+	width:30px;
+	border-radius:50%;
+	vertical-align:middle;
+	padding-left:inherit;
+	
+}
+
+.logo img
+{
+	padding-top:110px;
+	height:95px;
+	width: 270px;
+
+}
+
+.search input[type="text"]
+{
+	margin-top:25px;
+	height: 25px;
+	width: 570px;
+	border: 1px solid #d9d9d9;
+	border-top-color: #c0c0c0;
+	vertical-align: top;
+}
+
+.search input[type="text"]:focus
+{
+	border: 1px solid #4d90fe;
+	outline: none;
+}
+
+.button input[type="submit"]
+{
+	height:29px;
+	line-height:27px;
+	background-color: #f5f5f5;
+	border: 1px solid #dcdcdc;
+	border-radius: 2px;
+	color: #444;
+	cursor: default;
+	font-family: arial,sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 11px 8px;
+	min-width: 54px;
+	padding: 0 8px;
+	text-align: center;
+}
+
+.button input[type="submit"]:focus
+{
+	border: 1px solid #4d90fe;
+	outline: none;
+}
+.voice
+{
+	background: url("../img/mic.gif") no-repeat 550px;
+	background-size: 14px 19px;
+	display:inline-block;
+	opacity: 0.6;
+}
+#container
+{
+	width:100%;
+	height:380px;
+
+	top:0;
+}
+
+#footer
+{
+	height:60px;
+	width:100%;
+	bottom: 0;	
+	background:#f2f2f2;
+	bottom: 0;
+	position:fixed;
+}
+
+.left-foot
+{
+	height:60px;
+	line-height:58px;
+	vertical-align:middle;
+	float:left;
+	margin-left:5px;
+}
+
+.right-foot
+{
+	height:60px;
+	line-height:58px;
+	vertical-align:middle;
+	float:right;
+	margin-right:5px;
+}
