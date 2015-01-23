@@ -1,0 +1,74 @@
+/*** Style Sheet ***/
+body{
+	background-color:#F7FFF7;
+	margin: 0px;
+}
+header{
+	text-align:center;
+	background-color:#B2F0FF;
+	width:960px;
+	height:90px;
+	border-radius:10px;
+	margin:1px auto;
+}
+footer{
+	height:70px;
+	text-align:center;
+	line-height:70px;
+	background-color:#B2FFB2;
+}
+h1{
+	font-size:24px;
+	font-weight:bold;
+	font-family:Garamond, san-serif;
+	line-height:50px;
+}
+p{
+	font-size:16px;
+	font-weight:bold;
+}
+table{
+	margin: 5px auto;
+}
+td{
+	border: 0.5px solid black;
+	background-color:#FAFAF8;
+}
+
+#wrap{
+	width:100%;
+	margin:10px auto;
+	background-color:#E0E0D1;
+}
+
+#control{
+	margin:10px auto;
+	width:100%;
+	text-align:center;
+}
+
+button{
+	display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+    color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
