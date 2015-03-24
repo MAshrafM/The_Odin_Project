@@ -3,3 +3,4 @@
 <h3>The Front End: JavaScript & JQuery </h3>
 <p> 2nd Project </p>
 <a href="http://www.theodinproject.com/web-development-101/javascript-and-jquery">Etch-A-Sketch</a>
+
