@@ -1,9 +1,6 @@
-# google-homepage
-the-odin-project
 
-Front End
-
-HTML/CSS
-
-Google Homepage
->> http://www.theodinproject.com/web-development-101/html-css
+<h1>The Odin Project</h1>
+<h2>Web Development 101</h2>
+<h3>The Front End: HTML/CSS </h3>
+<p> 1nd Project </p>
+<a href="http://www.theodinproject.com/web-development-101/html-css">Google Homepage</a>
