@@ -17,6 +17,7 @@
 
 <br />
 <p> <%= @article.body %> </p>
+<% if logged_in? %>
 <br />
 <ul class='btn-nav'>
 	<li> <%= link_to "Edit", edit_article_path , class: "btn-new fancy-button-reset-base-class"%> </li>
@@ -24,6 +25,7 @@
 				  method: :delete,
 				  data: { confirm: "Are you sure?" } %></li>
 </ul>
+<% end %>
 <br />
 
 <h3> Comments (<%= @article.comments.size %>)</h3>
