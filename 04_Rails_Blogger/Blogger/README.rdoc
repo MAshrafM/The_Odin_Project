@@ -1,28 +1,4 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<h1> 4th Project </h1>
+<h2> The Odin Project </h2>
+<h3> Project Rails </h3>
+<p> This is the <a href="http://tutorials.jumpstartlab.com/projects/blogger.html"> Jumpstart Labs Blogger Tutorial</a> all the way through from I0 to I5 going to work on the Extras with better styles </p>
