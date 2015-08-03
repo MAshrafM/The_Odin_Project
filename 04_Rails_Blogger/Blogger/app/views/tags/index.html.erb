@@ -1,0 +1,19 @@
+<h1> All Tags </h1>
+
+<ul class="tag_block">
+
+	<% @tags.each do |tag| %>
+	<li>
+	<ul class='btn-nav'>
+		<li>
+			<%= link_to tag.name, tag_path(tag) %></li>
+		<li style="float:right"><%= button_to "Delete", tag_path(tag),
+				  method: :delete,
+				  data: { confirm: "Are you sure?" } %></li>
+	</ul>
+	</li>
+	<% end %>
+
+</ul>
+<br />
+<%= link_to "<< Back To Articles List", articles_path %>

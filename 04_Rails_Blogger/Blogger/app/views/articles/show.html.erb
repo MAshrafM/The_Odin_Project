@@ -1,5 +1,21 @@
 <h1> <%= @article.title %></h1>
+<br />
+<p>
+	Tags:
+	<% @article.tags.each do |tag| %>
+		<%= link_to tag.name, tag_path(tag) %>
+	<% end %>
+</p>
+<hr />
+<br />
 
+<% if @article.image.exists? %>
+	<p>
+	<%= image_tag @article.image.url %>
+	</p>
+<% end %>
+
+<br />
 <p> <%= @article.body %> </p>
 <br />
 <ul class='btn-nav'>
@@ -9,4 +25,11 @@
 				  data: { confirm: "Are you sure?" } %></li>
 </ul>
 <br />
+
+<h3> Comments (<%= @article.comments.size %>)</h3>
+<%= render partial: "articles/comment", collection: @article.comments %>
+<br />
+<%= render partial: "comments/form" %>
+<br />
 <%= link_to "<< Back To Articles List", articles_path %>
+
