@@ -6,6 +6,6 @@ some simple refresher blocks using ruby.</p>
 <ul>
 <li>Project 1: Caesar Cipher</li>
 <li>Project 2: Stock Picker</li>
-<li>Project 3: Substrings<li>
+<li>Project 3: Substrings</li>
 </ul>
 
