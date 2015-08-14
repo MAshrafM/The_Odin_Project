@@ -22,8 +22,9 @@ module TicTacToe
 	end
 	
     def formatted_grid
-	  grid.each do |row|
-	    puts row.map { |cell| cell.value.empty? ? "_" : cell.value }.join("  ")
+	  grid.each_with_index do |row, idx|
+	    puts row.map { |cell| cell.value.empty? ? " _ " : " " +cell.value+" " }.join("|")
+		print "---+---+---\n" unless idx == 2
 	  end
 	end
 	
