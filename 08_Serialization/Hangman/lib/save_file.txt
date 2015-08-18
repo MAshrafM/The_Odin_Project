@@ -1,0 +1,9 @@
+---
+:word: COCCYGES
+:name: MAshraf
+:guess: ______E_
+:wrong:
+- A
+- I
+- U
+:wcount: 8
