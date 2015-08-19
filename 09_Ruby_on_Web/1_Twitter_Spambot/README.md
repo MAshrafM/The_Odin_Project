@@ -1,8 +1,8 @@
 <h1> The Odin Project</h1>
-<h2> Project #9.1 Twitter Spambot"
-<p> <a href="http://tutorials.jumpstartlab.com/projects/microblogger.html"> JumpStartLab Tutorial</a>
-<strong>MicroBlogger</strong>
-"In this multi-phase project, you will build a client that interacts with the Twitter messaging service. Your client will both mimic functionality found through the twitter.com web interface as well as perform many new tasks."
+<h2> Project #9.1 Twitter Spambot"</h2>
+<p> <a href="http://tutorials.jumpstartlab.com/projects/microblogger.html"> JumpStartLab Tutorial</a></p>
+<p><strong>MicroBlogger</strong></p>
+<p>"In this multi-phase project, you will build a client that interacts with the Twitter messaging service. Your client will both mimic functionality found through the twitter.com web interface as well as perform many new tasks."
 </p>
 <p> Following the walkthrough without the finale iteration (Klout API)</p>
 <p> Working on windows problem#1 ssl cert fix: cacert.pim download and set as system variable</p>
