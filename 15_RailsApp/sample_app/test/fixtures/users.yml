@@ -3,7 +3,7 @@
 sonic:
   name: sonic
   email: ee.mashraf@gmail.com
-  password_digest: <%= User.digest('sonic2005') %>
+  password_digest: <%= User.digest('testtest') %>
   admin: true
   activated: true
   activated_at: <%= Time.zone.now %>

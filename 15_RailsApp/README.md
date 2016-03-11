@@ -8,4 +8,6 @@ Part of The Odin Project:
 - Project: Basic Routes, Views and Controllers (Chapter 5)
 - Project: Active Record Basics (Chapter 6)
 - Project: Forms (Chapter 7)
-- Projects: Authentication (Chapter 8 and 9)
+- Project: Authentication (Chapter 8 and 9)
+- Account Activation and Password Reset (Chapter 10)
+- Project: Active Record Associations (Chapter 11)
