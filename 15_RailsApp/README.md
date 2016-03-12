@@ -11,3 +11,4 @@ Part of The Odin Project:
 - Project: Authentication (Chapter 8 and 9)
 - Account Activation and Password Reset (Chapter 10)
 - Project: Active Record Associations (Chapter 11)
+- Project: Advanced Active Record Associations (Chapter 12)
