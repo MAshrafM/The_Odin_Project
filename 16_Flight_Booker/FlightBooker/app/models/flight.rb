@@ -1,6 +1,8 @@
 class Flight < ActiveRecord::Base
   belongs_to :departure_airport, class_name: "Airport"
   belongs_to :destination_airport, class_name: "Airport"
+  has_many :bookings
+  has_many :passengers, through: :passenger_bookings
   
   validates :departure_airport_id, presence: true
   validates :destination_airport_id, presence: true

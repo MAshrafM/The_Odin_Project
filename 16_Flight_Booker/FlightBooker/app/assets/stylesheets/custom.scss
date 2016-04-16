@@ -1,2 +1,57 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body{
+	height: 100%;
+    margin: 0;
+	background-image: url("https://images.trvl-media.com/media/content/expus/graphics/launch/home/tvly/150324_flights-hero-image_1330x742.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar-default{
+	border: 0px;
+	border-radius: 0px;
+	color: #fff;
+	background-color: #0281D8;
+	height:60px;
+	.navbar-brand{
+		color: #fff;
+		&:hover{
+			color:#afafaf;
+		}
+	}
+}
+main{
+	padding: 10px;
+    min-height: -webkit-calc(100% - 100px);     /* Chrome */
+    min-height: -moz-calc(100% - 100px);     /* Firefox */
+    min-height: calc(100% - 100px);     /* native */
+}
+footer{
+	position: relative;
+    clear:both;
+	background-color: #0C3B6B;
+	height: 75px;
+	p{
+	  padding-top: 30px;
+	  margin-bottom: 0px;
+	  color: #fff;
+	  font-weight: bold;
+	}
+}
+
+.search{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.search-results{
+	margin-bottom: 50px;
+}
