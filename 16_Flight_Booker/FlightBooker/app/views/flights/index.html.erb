@@ -27,3 +27,42 @@
 		<% end %>
 	</div>
 </div>
+
+<% unless @flights.empty? %>
+	<div class="row search-results">
+
+		<div class="col-sm-6 col-sm-offset-3 well">
+			<h3>Choose a flight</h3>
+
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Flight No:</th>
+						<th>Departing From:</th>
+						<th>Destination</th>
+						<th>Date:</th>
+						<th>Time:</th>
+					</tr>
+				</thead>
+
+				
+					<tbody>
+						<% @flights.each do |flight| %>
+							<tr>
+								<td><%= radio_button_tag(:flight_id, flight.id,class: "flight_select")  %></td>
+								<td><%= flight.id %></td>
+								<td><%= flight.departure_airport.city %></td>
+								<td><%= flight.destination_airport.city %></td>
+								<td><%= flight.departure_date.strftime("%d/%m/%Y") %></td>
+								<td><%= flight.departure_date.strftime("%H:%M") %></td>
+							</tr>
+						<% end %>
+					</tbody>
+			</table>
+					
+				
+						
+		</div>
+	</div>
+<% end %>
