@@ -1,0 +1,19 @@
+<h1 class="text-center"> Guess The Number </h1>
+<p class="text-center"><em>Don't Cheat</em></p>
+<hr>
+<form class="form-inline">
+  <input type='text' name='guess' class="form-control"/>
+  <input type='submit' value='Guess!' class="btn btn-primary"/>
+</form>
+
+<p class="alert alert-info text-center"><strong><%= message %></strong></p>
+<p>
+<strong>Guess Remaining: </strong><%= guess_remain %>
+
+</p>
+<% if cheat %>
+  <p>
+    The Secret Number is : <%= x %>
+  </p>
+<% end %>
+
