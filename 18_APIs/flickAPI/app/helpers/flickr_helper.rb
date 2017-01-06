@@ -9,7 +9,7 @@ module FlickrHelper
   end
   
   def render_flickr_widget(user_id)
-      photos = uphotos(user_id)
+      photos = uphotos(user_id).take(9)
       render :partial => '/flickr/flick_widget', :locals => { :photos => photos }
   end
 end

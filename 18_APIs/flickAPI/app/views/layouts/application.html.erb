@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <div class="main-container">
+    <h1>Flickr API</h1>
+    <p>Enter Flickr User Id or convert username to id from here and get the photostream</p>
+    
+    <%= yield %>
+  </div>
+  
 
 </body>
 </html>

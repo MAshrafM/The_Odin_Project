@@ -1,8 +1,8 @@
-<div class="flicker-container">
+<div class="flickr-container">
   <% photos.each do |p| %>
     <% unless p.nil? %>
       <div class="flick-col">
-        <%= link_to(image_tag(FlickRaw.url_s(p), :class => 'flickr_photo', :title => p.title), FlickRaw.url_photopage(p)) %>
+        <%= link_to(image_tag(FlickRaw.url(p), :class => 'flickr_photo', :title => p.title), FlickRaw.url_photopage(p)) %>
       </div>
     
     <% else %>
