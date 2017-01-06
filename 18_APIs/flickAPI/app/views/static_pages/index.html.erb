@@ -1,0 +1,9 @@
+<div class="search-user">
+<%= form_for ("/", method: "get") do |f| %>
+  <%= f.label(:user_id, "Username:") %>
+  <%= f.text_field(:user_id) %>
+  <%= f.submit("Search") %>
+<% end %>
+</div>
+
+<%= render_flickr_widget(@user) %>
