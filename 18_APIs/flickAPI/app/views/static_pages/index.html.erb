@@ -1,8 +1,8 @@
 <div class="search-user">
-<%= form_for ("/", method: "get") do |f| %>
-  <%= f.label(:user_id, "Username:") %>
-  <%= f.text_field(:user_id) %>
-  <%= f.submit("Search") %>
+<%= form_tag("/", method: "get") do %>
+  <%= label_tag(:user_id, "Username:") %>
+  <%= text_field_tag(:user_id) %>
+  <%= submit_tag("Search") %>
 <% end %>
 </div>
 
