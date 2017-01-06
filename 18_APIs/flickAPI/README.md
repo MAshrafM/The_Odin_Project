@@ -10,4 +10,4 @@ Using:
 - Figaro gem
 
 ### ShowCase
-![View](https://github.com/MAshrafM/The_Odin_Project/blob/master/18_APIs/flickAPI/show.png)
+![View](https://github.com/MAshrafM/The_Odin_Project/blob/master/18_APIs/flickAPI/showcase.png)
