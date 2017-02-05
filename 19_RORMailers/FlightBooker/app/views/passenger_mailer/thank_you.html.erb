@@ -2,15 +2,48 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style>
+      body{
+        background-color:#0281D8;
+      }
+      .mail-body{
+        width: 960px;
+        background-color: white;
+        margin: 15px auto;
+        border: 3px solid black;
+        border-radius: 10px;
+        padding: 25px;
+        font-weight: bold;
+        
+
+        
+        }
+        .mail-head{
+          text-align: left;
+          }
+        .mail-content{
+          margin-top: 15px;
+        }
+        .success{
+          color:green;
+        }
+    </style>
   </head>
   <body>
-    <h1>Welcome to MAFlightBooker.com, <%= @passenger.name %></h1>
-    <p>
-      You have successfully booked a flight with MAFlightBooker.<br>
-      Your Flight is from: <%= @booking.flight.departure_airport.city %> airport
-      to: <%= @booking.flight.destination_airport.city %> airport
+    <main class="mail-body">
+      <h2 class="mail-head">Welcome to MAFlightBooker.com, <%= @passenger.name %></h2>
+      <hr>
+      <div class="mail-content">
+        <p class="success">You have successfully booked a flight with MAFlightBooker.</p>
+        <p>
+          Your Flight is from: <%= @booking.flight.departure_airport.city %> airport.<br>
+          to: <%= @booking.flight.destination_airport.city %> airport.
+        </p>
+        </p>
+        <p>Thanks for using MAFlightBooker and have a great flight!</p>
+      </div>
       
-    </p>
-    <p>Thanks for using MAFlightBooker and have a great flight!</p>
+    </main>
+    
   </body>
 </html>
