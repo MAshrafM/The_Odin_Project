@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to MAFlightBooker.com, <%= @passenger.name %></h1>
+    <p>
+      You have successfully booked a flight with MAFlightBooker.<br>
+      Your Flight is from: <%= @booking.flight.departure_airport.city %> airport
+      to: <%= @booking.flight.destination_airport.city %> airport
+      
+    </p>
+    <p>Thanks for using MAFlightBooker and have a great flight!</p>
+  </body>
+</html>

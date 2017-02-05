@@ -1,0 +1,70 @@
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3 well search">
+		<h3 class="text-center">Search for a Flight!</h3>
+		
+		<%= form_tag(flights_index_path, method: "get") do %>
+			<div class="form-group col-md-6 rm-p">
+					<%= label_tag(:departure_airport_id, "Departure Airport:") %>
+					<%= select_tag(:departure_airport_id, options_for_select(@airports, @departure_airport), class: "form-control") %>
+				</div>
+
+				<div class="form-group col-md-6">
+					<%= label_tag(:destination_airport_id, "Destination Airport:") %>
+					<%= select_tag(:destination_airport_id, options_for_select(@airports, @destination_airport), class: "form-control", id: "destination-select") %>
+				</div>
+
+				<div class="form-group col-md-6 rm-p">
+					<%= label_tag(:departure_date, "Date:") %>
+					<%= select_tag(:departure_date, options_for_select(@dates, @depart_date), class: "form-control") %>
+				</div>
+
+				<div class="form-group col-md-6">
+					<%= label_tag(:passengers, "Number of Passengers:") %>
+					<%= select_tag(:passengers, options_for_select(@passenger_options, @passengers), class: "form-control") %>
+				</div>
+
+				<%= submit_tag "Search", class: "btn btn-primary col-md-4 col-md-offset-4" %>
+		<% end %>
+	</div>
+</div>
+
+<% unless @flights.empty? %>
+	<div class="row search-results">
+
+		<div class="col-sm-6 col-sm-offset-3 well">
+			<h3>Choose a flight</h3>
+
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Flight No:</th>
+						<th>Departing From:</th>
+						<th>Destination</th>
+						<th>Date:</th>
+						<th>Time:</th>
+					</tr>
+				</thead>
+
+				<%= form_tag(new_booking_path, method: "get") do %>
+					<tbody>
+						<% @flights.each do |flight| %>
+							<tr>
+								<td><%= radio_button_tag(:flight_id, flight.id,class: "flight_select")  %></td>
+								<td><%= flight.id %></td>
+								<td><%= flight.departure_airport.city %></td>
+								<td><%= flight.destination_airport.city %></td>
+								<td><%= flight.departure_date.strftime("%d/%m/%Y") %></td>
+								<td><%= flight.departure_date.strftime("%H:%M") %></td>
+							</tr>
+						<% end %>
+					</tbody>
+			</table>
+					
+				<%= hidden_field_tag(:passengers, params[:passengers]) %>
+				<%= submit_tag"Continue", class: "btn btn-success col-md-4 col-md-offset-8" %>
+				<% end %>
+						
+		</div>
+	</div>
+<% end %>
