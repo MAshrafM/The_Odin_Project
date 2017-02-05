@@ -5,4 +5,4 @@
 
 - Project : Sending Welcome Emails
 ### ShowCase
-![View](https://github.com/MAshrafM/The_Odin_Project/blob/master/19_RORMailers/show.png)
+![View](https://github.com/MAshrafM/The_Odin_Project/blob/master/19_RORMailers/show.PNG)
