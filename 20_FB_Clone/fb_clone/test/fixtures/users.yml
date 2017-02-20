@@ -1,0 +1,14 @@
+valid_user:
+  name: sonic
+  last_name: hedge
+  email: sonic@live.com
+  password: password
+  password_confirmation: password
+  
+invald_user:
+  name: sonix
+  last_name: no name
+  email: null
+  password: password
+  password_confirmation: password
+  
