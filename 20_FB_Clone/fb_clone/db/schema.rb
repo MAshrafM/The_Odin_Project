@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170223052303) do
+ActiveRecord::Schema.define(version: 20170223053858) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "body"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 20170223052303) do
   add_index "friendships", ["request_from_id", "request_to_id"], name: "index_friendships_on_request_from_id_and_request_to_id", unique: true
   add_index "friendships", ["request_from_id"], name: "index_friendships_on_request_from_id"
   add_index "friendships", ["request_to_id"], name: "index_friendships_on_request_to_id"
+
+  create_table "likes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.text     "body"

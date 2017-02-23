@@ -10,4 +10,5 @@ class User < ActiveRecord::Base
   has_many :requested_friends, through: :requested_friends, source: :request_from
   has_many :received_friendships, foreign_key: :request_to_id, class_name: "Friendship", dependent: :destroy
   has_many :received_friends, through: :received_friendships, source: :request_to
+  has_many :likes
 end
