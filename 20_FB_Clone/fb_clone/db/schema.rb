@@ -11,13 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170223051319) do
+ActiveRecord::Schema.define(version: 20170223052303) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "friendships", force: :cascade do |t|
+    t.boolean  "friends",         default: false
+    t.integer  "request_from_id"
+    t.integer  "request_to_id"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  add_index "friendships", ["request_from_id", "request_to_id"], name: "index_friendships_on_request_from_id_and_request_to_id", unique: true
+  add_index "friendships", ["request_from_id"], name: "index_friendships_on_request_from_id"
+  add_index "friendships", ["request_to_id"], name: "index_friendships_on_request_to_id"
 
   create_table "posts", force: :cascade do |t|
     t.text     "body"

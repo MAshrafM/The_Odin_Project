@@ -1,0 +1,12 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  friends: false
+  request_from_id: 1
+  request_to_id: 1
+
+two:
+  friends: false
+  request_from_id: 1
+  request_to_id: 1
