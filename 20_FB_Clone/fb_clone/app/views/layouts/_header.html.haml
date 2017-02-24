@@ -1,5 +1,34 @@
-.nav
+.navigation-bar
   .container
-    .brand
-      %a(href= root_path)
-        %i.fa.fa-facebook-official
+    .brand.pull-left
+      %ul.left-menu
+        %li.main-book
+          %a(href="#")
+            %i.fa.fa-facebook-official
+        - if user_signed_in? 
+          %form(role="search")
+            %input.form-control(type="text" placeholder="Search for friends ...")
+        - else
+          %li
+            %h3
+              %a(href="#") RBook
+          
+    .navigation-links.pull-right
+      - if user_signed_in?
+        %ul.right-menu
+          %li
+            %a(href="#")
+              %i.fa.fa-flag
+          %li.dropdown
+            %a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#")
+              %i.fa.fa-user
+              %i.fa.fa-caret-down
+            %ul.dropdown-menu
+              %li
+                %a(href="#") Option
+              %li
+                %a(href="#") Option
+              %li
+                %a(href="#") Option
+      - else
+        %a(href="#") Welcome!
