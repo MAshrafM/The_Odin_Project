@@ -50,6 +50,8 @@ group :development, :test do
   gem 'mini_backtrace'
   gem 'factory_girl'
   gem 'factory_girl_rails'
+  gem 'guard-rspec', require: false
+  gem 'terminal-notifier-guard'
 end
 
 group :development do
