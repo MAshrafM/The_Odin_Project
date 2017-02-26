@@ -6,6 +6,8 @@ class Post < ActiveRecord::Base
   has_many :likes, dependent: :destroy
   
   validates_attachment_content_type :post_image, content_type: /\Aimage\/.*\Z/
-  validates :body, length: { maximum: "1000" }
+  
+  validates_presence_of :body
+  validates :body, length: { maximum: 1000 }
   
 end

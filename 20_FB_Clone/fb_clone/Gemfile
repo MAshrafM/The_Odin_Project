@@ -52,6 +52,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'guard-rspec', require: false
   gem 'terminal-notifier-guard'
+  gem 'shoulda-matchers', require: false
+  gem 'database_cleaner'
+  gem 'capybara'
 end
 
 group :development do
