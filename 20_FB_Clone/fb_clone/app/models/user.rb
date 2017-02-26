@@ -20,4 +20,75 @@ class User < ActiveRecord::Base
   
   # Validations
   validates_presence_of :name, :last_name
+  
+  #Methods
+  
+  #send friend request
+  def request_friendship(other_user)
+    if valid_friend_request?(other_user)
+      self.requested_friendships.create(request_to_id: other_user.id)
+    end
+  end
+  
+  #check friendship
+  def has_friendship?(other_user)
+    !get_friendship(self, other_user).nil?
+  end
+  
+  # check sent request
+  def has_requested?(other_user)
+    !get_request(other_user, self).nil?
+  end
+  
+  # accept a request
+  def accept_friend_request(other_user)
+    friendship = get_request(other_user, self)
+    if friendship
+      friendship.update_attributes(friends: true)
+    end
+  end
+  
+  # reject a request
+  def reject_friend_request(other_user)
+    friendship = get_request(other_user, self)
+    if friendship
+      friendship.destroy
+    end
+  end
+  
+  # delete friendship
+  def delete_friendship(other_user)
+    if has_friendship?(other_user)
+      get_friendship(self, other_user).destroy
+    end
+  end
+  
+  # get all friends
+  def get_all_friends
+    User.where(
+      "id IN 
+      (SELECT request_to_id FROM friendships WHERE request_from_id = :user_id AND friends = :state) 
+      OR id IN
+      (SELECT request_from_id FROM friendships WHERE request_to_id = :user_id AND friends = :state)",
+      user_id: self.id, state: true
+    )
+  end
+  
+  private
+  
+  # return the request that from made to to
+  def get_request(from, to)
+    from.requested_friendships.find_by(request_to_id: to.id, friends: false)
+  end
+  
+  # return relation with current friendship
+  def get_friendship(current_user, other_user)
+    current_user.requested_friendships.find_by(request_to_id: other_user.id, friends: true) ||
+      other_user.requested_friendships.find_by(request_to_id: current_user.id, friends: true)
+  end
+  
+  # check if they are friend or if the request hasnt been sent
+  def valid_friend_request?(other_user)
+    get_friendship(self, other_user).nil? && get_request(other_user, self).nil?
+  end
 end
