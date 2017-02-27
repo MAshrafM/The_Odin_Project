@@ -8,6 +8,7 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :post_image, content_type: /\Aimage\/.*\Z/
   
   validates_presence_of :body
+  validates_presence_of :user_id
   validates :body, length: { maximum: 1000 }
   
 end
