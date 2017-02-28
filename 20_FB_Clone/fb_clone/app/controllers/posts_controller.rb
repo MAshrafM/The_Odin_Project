@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     else
       flash[:error] = "Something went wrong"
     end
-    redirect_to posts_path
+    redirect_to root_path
   end
   
   private

@@ -17,6 +17,9 @@
  $github: #333333;
  $facebook: #3b5998;
 
+html{
+  background-color: #e9eaed;
+}
 /* nav */ 
 .navigation-bar{
   background-color: $facebook;
@@ -105,3 +108,147 @@
     }
   }
  }
+ 
+ /* posts */
+.posts{
+  list-style:none;
+  padding: 0;
+  li{
+    padding: 10px 5px;
+    background-color: #ffffff;
+    margin: 5px auto;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    max-width: 550px;
+    max-height: 100%;
+  }
+  .user{
+    padding-top: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    a{
+      color: $facebook;
+      &:hover{
+        background: inherit;
+      }
+    }
+  }
+  .content{
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.38;
+    img{
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp{
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar{
+    float: left;
+    margin-right: 10px;
+  }
+}
+ 
+.create-post-box{
+  background: #ffffff;
+  max-width: 550px;
+  max-height: 100%;
+  margin: 10px auto;
+  padding: .3em 1em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  hr{
+    margin-top: 8px;
+  }
+  .pull-left{
+    padding-top: 6px;
+    a{
+      font-size: 14px;
+      color: $light;
+      text-decoration: none;
+      &:hover{
+        color: $facebook;
+        text-decoration: none;
+        background: inherit;
+      }
+    }
+  }
+}
+.update-status{
+  font-size: 15px;
+  i{
+    color: $facebook;
+    font-size: 22px;
+    margin-bottom: 0px;
+  }
+}
+
+
+/* custom tag styles */
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+{
+  outline:0px !important;
+  -webkit-appearance:none;
+}
+textarea{
+  resize: none;
+  font-size: 14px;
+}
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+ 
+ /* Special Purpose Classes */
+.clear-top{
+  margin-top: 15px;
+ }
+ 
+.full-line{
+  margin-bottom: 5px;
+}
+.bottom-links{
+  a{
+    margin-right: 15px;
+    color: $light;
+    &:hover{
+      color: $facebook;
+      background: inherit;
+    }
+  }
+}
+
+.form-control-mine{
+  margin-bottom: 5px;
+  border: 0;
+  width: 100%;
+  max-width: 530px;
+}
+
+.btn{
+  padding: 1px 30px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+  margin: 5px;
+}

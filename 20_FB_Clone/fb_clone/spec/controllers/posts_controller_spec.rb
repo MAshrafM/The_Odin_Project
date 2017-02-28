@@ -11,13 +11,13 @@ RSpec.describe PostsController, type: :controller do
       subject {post :create, post: {body: "Hello from Test"}}
       
       it "redirect to post path" do
-        expect(subject).to redirect_to action: :index
+        expect(subject).to redirect_to :root
       end
       
       subject {post :create, post: {body: ""}}
       
       it "redirect to post path" do
-        expect(subject).to redirect_to action: :index
+        expect(subject).to redirect_to :root
       end
       
     end

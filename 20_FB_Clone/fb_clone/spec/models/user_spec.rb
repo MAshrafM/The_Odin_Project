@@ -61,5 +61,38 @@ RSpec.describe User, type: :model do
       end
     end
     
+    context "User feed" do
+      before(:example) do
+        @user 	= create(:user)
+        @another_user = create(:another_user)
+        @another_user.request_friendship(@user)
+        @user.accept_friend_request(@another_user)
+        2.times do |n|
+          @another_user.posts.create(body: "Hello world this is the post number #{n}")
+          @user.posts.create(body: "Hello world this is Admin with my post number #{n}")
+        end
+      end
+      
+      it 'gets the feed of friends' do
+        @another_user.posts.each do |post|
+          expect(@user.feed.include?(post)).to be true
+        end
+        
+        @user.posts.each do |post|
+          expect(@another_user.feed.include?(post)).to be true
+        end
+      end
+      
+      it 'gets the feed of self' do
+        @another_user.posts.each do |post|
+          expect(@another_user.feed.include?(post)).to be true
+        end
+        
+        @user.posts.each do |post|
+          expect(@user.feed.include?(post)).to be true
+        end
+      end
+    end
   end
+
 end

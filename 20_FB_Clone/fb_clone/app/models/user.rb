@@ -77,6 +77,19 @@ class User < ActiveRecord::Base
     )
   end
   
+  # get feed
+  def feed
+    Post.where(
+      "user_id IN 
+      (SELECT request_to_id FROM friendships WHERE request_from_id = :user_id AND friends = :state)
+      OR user_id IN
+      (SELECT request_from_id FROM friendships WHERE request_to_id = :user_id AND friends = :state)
+      OR user_id = :user_id",
+      user_id: self.id, state: true
+    ).order(created_at: :desc)
+      
+  end
+  
   private
   
   # return the request that from made to to
