@@ -24,12 +24,14 @@ RSpec.describe User, type: :model do
       it "can send a friend request" do
         @another_user.request_friendship(@user)
         expect(@user.received_friendships.count).to be == 1
+        expect(@user.notifications.count).to be == 1
       end
       
       it "accept friend request" do
         @another_user.request_friendship(@user)
         @user.accept_friend_request(@another_user)
         expect(@user.get_all_friends.count).to be == 1
+        expect(@user.notifications.count).to be == 1
       end
       
       it "check friend ships" do

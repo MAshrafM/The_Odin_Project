@@ -17,6 +17,7 @@ class User < ActiveRecord::Base
   # likes and notifications associations
   has_many :likes, dependent: :destroy
   has_many :notifications, dependent: :destroy
+  has_many :sent_notifications, class_name: "Notification", dependent: :destroy, foreign_key: :sender_id
   
   # Validations
   validates_presence_of :name, :last_name
@@ -27,6 +28,7 @@ class User < ActiveRecord::Base
   def request_friendship(other_user)
     if valid_friend_request?(other_user)
       self.requested_friendships.create(request_to_id: other_user.id)
+      other_user.notifications.create(sender_id: self.id, title: "request", message: "#{self.name.capitalize} #{self.last_name.capitalize} wants to be friends with you.")
     end
   end
   
@@ -45,6 +47,7 @@ class User < ActiveRecord::Base
     friendship = get_request(other_user, self)
     if friendship
       friendship.update_attributes(friends: true)
+      other_user.notifications.create(sender_id: self.id, title: "accept_request", message: "You are now friends with #{self.name.capitalize} #{self.last_name.capitalize}.")
     end
   end
   
