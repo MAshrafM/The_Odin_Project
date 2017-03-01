@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
   end
   
@@ -13,9 +15,15 @@ class PostsController < ApplicationController
     else
       flash[:error] = "Something went wrong"
     end
-    redirect_to root_path
+    redirect_to root_url
   end
   
+  def destroy
+    @post= Post.find(parmas[:id])
+    if @post.destroy
+      redirect_to root_url
+    end
+  end
   private
   def post_params
     params.require(:post).permit(:body, :user_id)

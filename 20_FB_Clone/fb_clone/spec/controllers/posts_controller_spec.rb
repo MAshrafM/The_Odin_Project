@@ -5,21 +5,32 @@ RSpec.describe PostsController, type: :controller do
     before(:example) do
       @user = create(:user)
       sign_in @user
+      @user.posts.create(body: "Hello World")
+      @user.posts.create(body: "Hello Odin")
     end
     
     context "Create post" do
       subject {post :create, post: {body: "Hello from Test"}}
       
-      it "redirect to post path" do
+      it "redirect to Home" do
         expect(subject).to redirect_to :root
+        expect{ post :create, post: { body: "Hello from Test" } }.to change(Post, :count).by(+1)
       end
       
       subject {post :create, post: {body: ""}}
       
-      it "redirect to post path" do
+      it "redirect to Home" do
         expect(subject).to redirect_to :root
+        expect{  post :create, post: { body: "" } }.to change(Post, :count).by(0)
       end
-      
+    end
+    
+    context "Destroy posts" do
+      subject { delete :destroy , id: @user.posts.last }
+      it "redirects home after destroy" do
+        expect(subject).to redirect_to :root
+        expect{ delete :destroy, :id => @user.posts.last }.to change(Post, :count).by(-1)
+      end
     end
   end
 end
