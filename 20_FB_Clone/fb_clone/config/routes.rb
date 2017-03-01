@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'notifications/index'
-
-  get 'notifications/destroy'
 
   devise_for :users, controllers: { sessions: 'users/sessions' }
+  resources :notifications, only: [:index, :destroy]
+  resources :users, only: [ :show ]
   resources :posts
   root "static_pages#home"
 end
