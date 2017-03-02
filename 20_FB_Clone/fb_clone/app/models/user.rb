@@ -42,6 +42,29 @@ class User < ActiveRecord::Base
     !get_request(other_user, self).nil?
   end
   
+  #already requested
+  def requested_to?(other_user)
+    has_requested?(other_user) && get_request(other_user, self).request_from == self ? true : false
+  end
+  
+  # friendship status
+  def status
+    if has_friendship?(other_user)
+      return "friends"
+    elsif has_requested?(other_user)
+      if requested_to?(other_user)
+        return "i_requested"
+      else
+        return "i_recieved"
+      end
+    end
+  end
+  
+  # get the relation
+  def get_relationship(other_user)
+    get_request(other_user,self).nil? ? get_friendship(self,other_user) : get_request(other_user,self)
+  end
+  
   # accept a request
   def accept_friend_request(other_user)
     friendship = get_request(other_user, self)
@@ -94,7 +117,7 @@ class User < ActiveRecord::Base
   
   # return the request that from made to to
   def get_request(from, to)
-    from.requested_friendships.find_by(request_to_id: to.id, friends: false)
+    from.requested_friendships.find_by(request_to_id: to.id, friends: false) || to.requested_friendships.find_by(request_to_id: from.id, friends: false)
   end
   
   # return relation with current friendship
