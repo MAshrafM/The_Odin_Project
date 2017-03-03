@@ -10,18 +10,18 @@ RSpec.describe PostsController, type: :controller do
     end
     
     context "Create post" do
-      subject {post :create, post: {body: "Hello from Test"}, format: :json}
+      subject {post :create, post: {body: "Hello from Test"}, format: :js}
       
       it "redirect to Home" do
-        expect(subject.status).to eq(422)
-        expect{ post :create, post: { body: "Hello from Test" } }.to change(Post, :count).by(+1)
+        expect(subject.status).to eq(200)
+        expect{ post :create, post: { body: "Hello from Test" }, format: :js }.to change(Post, :count).by(+1)
       end
       
-      subject {post :create, post: {body: ""}, format: :json}
+      subject {post :create, post: {body: ""}, format: :js}
       
       it "redirect to Home" do
-        expect(subject.status).to eq(422)
-        expect{  post :create, post: { body: "" } }.to change(Post, :count).by(0)
+        expect(subject.status).to eq(200)
+        expect{  post :create, post: { body: "" }, format: :js }.to change(Post, :count).by(0)
       end
     end
     
