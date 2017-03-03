@@ -10,17 +10,17 @@ RSpec.describe PostsController, type: :controller do
     end
     
     context "Create post" do
-      subject {post :create, post: {body: "Hello from Test"}}
+      subject {post :create, post: {body: "Hello from Test"}, format: :json}
       
       it "redirect to Home" do
-        expect(subject).to redirect_to :root
+        expect(subject.status).to eq(422)
         expect{ post :create, post: { body: "Hello from Test" } }.to change(Post, :count).by(+1)
       end
       
-      subject {post :create, post: {body: ""}}
+      subject {post :create, post: {body: ""}, format: :json}
       
       it "redirect to Home" do
-        expect(subject).to redirect_to :root
+        expect(subject.status).to eq(422)
         expect{  post :create, post: { body: "" } }.to change(Post, :count).by(0)
       end
     end

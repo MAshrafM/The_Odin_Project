@@ -10,31 +10,27 @@ class PostsController < ApplicationController
   
   def create
     @post = current_user.posts.build(post_params)
-    if @post.save
-      respond_to do |format|
-        format.html{ redirect_to root_url }
+    
+    respond_to do |format|
+      if @post.save
         format.json { render 'static_pages/home', status: :created }
         format.js {}
-      end
-      flash[:success] = "Your post has been posted successfully"
-    else
-      respond_to do |format|
+        format.html { redirect_to root_url }
+      else
         format.json { render json: @post.errors, status: :unprocessable_entity }
         format.js {}
+        format.html { redirect_to root_url }
       end
-      flash[:error] = "Something went wrong"
     end
-    redirect_to root_url
   end
   
   def destroy
-    @post= Post.find(parmas[:id])
-    if @post.destroy
-      respond_to |format| do
-        format.html {redirect_to root_url}
+    @post= Post.find(params[:id])
+    respond_to do |format|
+      if @post.destroy
+        format.html { redirect_to root_url }
         format.js {}
       end
-      
     end
   end
   private
