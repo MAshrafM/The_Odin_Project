@@ -17,7 +17,7 @@ class PostsController < ApplicationController
         format.js {}
         format.html { redirect_to root_url }
       else
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.json { render json: @post.errors.full_messages, status: :unprocessable_entity }
         format.js {}
         format.html { redirect_to root_url }
       end
