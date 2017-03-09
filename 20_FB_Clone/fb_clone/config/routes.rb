@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   resources :users, only: [ :show ]
   resources :friendships, only: [ :create, :update, :destroy ]
   resources :posts
+  resources :comments, only: [ :create, :destroy, :update ]
   root "static_pages#home"
 end
