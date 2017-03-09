@@ -44,7 +44,7 @@
             - if post.comments.any?
               #comments
                 - post.comments.each do |comment|
-                  %div{ id: "comment-#{post.id}" }
+                  %div{ id: "comment-#{comment.id}" }
                     .comment
                       .clearfix
                         .pull-left
