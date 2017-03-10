@@ -24,6 +24,10 @@ class User < ActiveRecord::Base
   
   #Methods
   
+  def full_name
+    "#{self.name} #{self.last_name}"
+  end
+  
   #send friend request
   def request_friendship(other_user)
     if valid_friend_request?(other_user)
