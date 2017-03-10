@@ -48,4 +48,17 @@
                 %a(href="#") Option
                 = link_to "Sign out", destroy_user_session_path, method: :delete
       - else
-        %a(href="#") Welcome!
+        = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-inline nav-form'}) do |f|
+          .form-group
+            = f.label :email
+            %br
+            = f.email_field :email, autofocus: true, class: 'form-control'
+          
+          .form-group
+            = f.label :password
+            %br
+            = f.password_field :password, autocomplete: "off", class: 'form-control'
+          .form-group.btn-log
+            = link_to "Forget Password?", "#"
+            %br
+            = f.submit "Log in", class: 'btn btn-primary'

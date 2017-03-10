@@ -15,5 +15,9 @@ Rails.application.routes.draw do
   resources :friendships, only: [ :create, :update, :destroy ]
   resources :posts
   resources :comments, only: [ :create, :destroy, :update ]
-  root "static_pages#home"
+  
+  authenticated :user do
+    root to: 'static_pages#home', as: :authenticated_root
+  end
+  root to: "static_pages#intro"
 end
