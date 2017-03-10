@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   
   resources :notifications, only: [:index, :destroy]
   resources :likes, only: [ :create, :destroy ]
-  resources :users, only: [ :show ] do 
+  resources :users, only: [ :show, :index ] do 
     member do
       get :friends, :requests
     end

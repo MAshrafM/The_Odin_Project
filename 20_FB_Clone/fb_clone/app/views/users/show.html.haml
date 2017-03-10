@@ -28,7 +28,7 @@
       %h2
         User Timeline
         %ul
-        - @user.posts.each do |post|
+        - @posts.each do |post|
           %li{:id => "post-#{post.id}"}
             .post
               = link_to gravatar_for(post.user, size: 50), post.user
@@ -65,4 +65,4 @@
                         = comment.body
               .comment-form
                 = render "comments/form", object: post
-    
+        = will_paginate @posts, renderer: BootstrapPagination::Rails

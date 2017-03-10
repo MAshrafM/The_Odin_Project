@@ -57,3 +57,4 @@
                         = comment.body
               .comment-form
                 = render "comments/form", object: post
+      = will_paginate @feed, renderer: BootstrapPagination::Rails
