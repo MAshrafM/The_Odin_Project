@@ -23,9 +23,15 @@ class User < ActiveRecord::Base
   validates_presence_of :name, :last_name
   
   #Methods
-  
+   
+  # show full name
   def full_name
     "#{self.name} #{self.last_name}"
+  end
+  
+  # get all friend requests
+  def get_all_requests
+    User.where("id IN (SELECT request_from_id FROM friendships WHERE request_to_id = :user_id AND friends = :state)", user_id: self.id, state: false)
   end
   
   #send friend request

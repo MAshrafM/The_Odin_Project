@@ -3,7 +3,7 @@
     .brand.pull-left
       %ul.left-menu
         %li.main-book
-          %a(href="#")
+          %a(href= root_path)
             %i.fa.fa-facebook-official
         - if user_signed_in? 
           %form(role="search")
@@ -11,11 +11,14 @@
         - else
           %li
             %h3
-              %a(href="#") RBook
+              %a(href=root_path) RBook
           
     .navigation-links.pull-right
       - if user_signed_in?
         %ul.right-menu
+          %li
+            %a(href=root_path)
+              %i.fa.fa-home
           %li.dropdown
             %a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#")
               %i.fa.fa-flag
@@ -34,9 +37,11 @@
               %i.fa.fa-caret-down
             %ul.dropdown-menu
               %li
-                %a(href="#") Option
+                = link_to "Requests received", requests_user_path(current_user)
               %li
-                %a(href="#") Option
+                = link_to "View profile", user_path(current_user)
+              %li
+                = link_to "Edit profile", edit_user_registration_path
               %li
                 %a(href="#") Option
                 = link_to "Sign out", destroy_user_session_path, method: :delete

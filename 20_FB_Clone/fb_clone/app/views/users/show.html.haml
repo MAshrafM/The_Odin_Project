@@ -17,6 +17,13 @@
                 = render partial: "remove_friendship_form", locals: { message: "Decline request" }
               - else
                 = render "send_request_form"
+      else
+        You have
+          = @user.get_all_requests.count
+          friendship requests
+      #user_stats
+        = render "user_stats"
+        
     .col-md-9
       %h2
         User Timeline

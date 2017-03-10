@@ -1,0 +1,3 @@
+%p
+  = link_to "Friends:", friends_user_path(@user)
+  = @user.get_all_friends.count
