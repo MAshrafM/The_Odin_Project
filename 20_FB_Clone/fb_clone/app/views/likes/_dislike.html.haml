@@ -1,4 +1,6 @@
 = form_for(object.get_liked_by(current_user), html: { method: :delete, remote: true }) do |f|
   .hidden
     = hidden_field_tag :post_id, object.id
-  = f.submit "Dislike(#{object.likes.count})", class: 'like-button'
+  = button_tag type: 'submit', class: 'fabutton' do
+    %i.fa.fa-thumbs-down
+    = object.likes.count

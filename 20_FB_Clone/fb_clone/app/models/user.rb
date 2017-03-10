@@ -58,14 +58,14 @@ class User < ActiveRecord::Base
   end
   
   # friendship status
-  def status
+  def status(other_user)
     if has_friendship?(other_user)
       return "friends"
     elsif has_requested?(other_user)
       if requested_to?(other_user)
         return "i_requested"
       else
-        return "i_recieved"
+        return "i_received"
       end
     end
   end

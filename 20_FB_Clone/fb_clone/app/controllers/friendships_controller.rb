@@ -2,7 +2,7 @@ class FriendshipsController < ApplicationController
   before_action :authenticate_user!
   
   def create
-    @user = User.find(params[:other_user_id])
+    @user = User.find(params[:request_to_id])
     respond_to do |format|
       if current_user.request_friendship(@user)
         format.html {redirect_to @user }

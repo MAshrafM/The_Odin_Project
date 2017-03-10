@@ -55,6 +55,6 @@
                             = link_to "delete", comment, method: :delete, remote: true
                       %p.com-body
                         = comment.body
-              .comment-form
-                = render "comments/form", object: post
+            .comment-form
+              = render "comments/form", object: post
       = will_paginate @feed, renderer: BootstrapPagination::Rails

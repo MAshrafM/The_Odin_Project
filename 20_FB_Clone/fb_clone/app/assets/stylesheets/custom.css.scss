@@ -19,6 +19,7 @@
 
 html, body{
   background-color: #e9eaed;
+  overflow-x: hidden;
 }
 /* nav */ 
 .navigation-bar{
@@ -31,7 +32,7 @@ html, body{
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .52);
   
   .brand{
-    font-size: 2em;
+    //font-size: 2em;
     color: #e8e8e8;
     display: block;
     margin: 0;
@@ -41,37 +42,40 @@ html, body{
       .main-book{
         font-size: 2.0em;
       }
-    }
-    li{
-      display: inline;
-      list-style: none;
-      color: #e8e8e8;
-      
-      h3{
+    
+      li{
         display: inline;
+        list-style: none;
+        color: #e8e8e8;
+        
+        h3{
+          display: inline;
+        }
       }
-    }
-    form{
-      display: inline;
-      float: right;
-      margin: 0;
-      input{
-        margin-left: 5px;
-        height: 25px;
-    }
-    a{
-      color: $light-grey;
-      &:hover{
-      color: #ffffff;
-      text-decoration: none;
-      background: #3a5795;
+      form{
+        display: inline;
+        float: right;
+        margin: 0;
+        input{
+          margin-left: 5px;
+          margin-top: 5px;
+          height: 25px;
+        }
+      }
+      a{
+        color: $light-grey;
+        &:hover{
+          color: #ffffff;
+          text-decoration: none;
+          background: #3a5795;
+        }
       }
     }
   }
   .right-menu{
     margin: 0;
     list-style: none;
-    font-size: 1.5em;
+    font-size: 1em;
     text-decoration: none;
     
     li{
@@ -85,12 +89,12 @@ html, body{
       margin-top: 15px;
       padding-right: 0px;
       li{
-      margin: 0;
+        margin: 0;
       }
       
       a{
-      color: $dark;
-      padding: 8px;
+        color: $dark;
+        padding: 8px;
       }
     }
     
@@ -107,7 +111,19 @@ html, body{
       }
     }
   }
- }
+  
+  .navigation-links{
+    a{
+        color: $light-grey;
+        font-size: 1.5em;
+        &:hover{
+          color: #ffffff;
+          text-decoration: none;
+          background: #3a5795;
+        }
+      }
+  }
+ 
 }
  
  /* posts */
@@ -337,4 +353,15 @@ span.picture {
   -moz-border-radius: 1px;
   border-radius: 1px;
   margin: 5px;
+}
+
+.fabutton{
+  background: none;
+  padding: 0px;
+  border: none;
+  i{
+    font-size: 1.5em;
+    color: $dark;
+    padding-left: 15px;
+  }
 }

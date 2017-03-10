@@ -1,4 +1,6 @@
 = form_for(object.likes.build, html: { remote: true }) do |f|
   .hidden
     = hidden_field_tag :post_id, object.id
-  = f.submit "Like(#{object.likes.count})", class: 'like-button'
+  = button_tag type: 'submit', class: 'fabutton' do
+    %i.fa.fa-thumbs-up
+    = object.likes.count

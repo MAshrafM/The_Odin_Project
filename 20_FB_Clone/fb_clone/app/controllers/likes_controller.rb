@@ -1,8 +1,9 @@
 class LikesController < ApplicationController
-
+  before_action :authenticate_user!
+  
   def create
     @post = Post.find(params[:post_id])
-    respond do |fotmat|
+    respond_to do |format|
       if @post.liked_by(current_user)
         format.js
         format.html {redirect_to root_url}
@@ -13,7 +14,7 @@ class LikesController < ApplicationController
   def destroy
     @post = Post.find(params[:post_id])
     @like = @post.likes.find(params[:id])
-    respond do |fotmat|
+    respond_to do |format|
       if @like.destroy
         format.js
         format.html {redirect_to root_url}
