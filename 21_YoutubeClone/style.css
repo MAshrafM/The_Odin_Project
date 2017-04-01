@@ -48,7 +48,7 @@ table {
 }
 
 /*
-  Custome Style
+  General Style
 */
 html {
   box-sizing: border-box;
@@ -58,3 +58,19 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+/*
+ Header
+*/
+
+/*
+  Main
+*/
+
+/*
+  Side
+*/
+
+/*
+  Footer
+*/
