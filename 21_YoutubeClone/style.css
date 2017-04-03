@@ -194,7 +194,166 @@ nav img {
 /*
   Main
 */
+main{
+  margin: 80px 20px;
+}
+#main-content {
+	width: 60%;
+	float: left;
+}
 
+aside {
+	width: 38%;
+	background-color: #fff;
+	float: right;
+	padding-bottom: 20px;
+}
+
+.video {
+	background-color: blue;
+	height: 400px;
+	width: 100%;
+}
+
+.about-video-header, .about-video, .comments {
+	background-color: #fff; 
+}
+
+.about-video-header {
+	padding: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.about-video-header h2 {
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0 0 10px 0;
+}
+
+.user-info {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+}
+
+.user-info img {
+	height: 48px;
+	width: 48px;
+	float: left;
+}
+
+.user-info-inner {
+	float: left;
+	margin-left: 10px;
+}
+
+.user-info a {
+	text-decoration: none;
+	color: #333;
+	width: 100%;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.subscribe button {
+	background-color: #e62117;
+	border: 1px solid transparent;
+	color: #fff;
+	float: left;
+	outline: none;
+}
+
+.subscribe span {
+	height: 22px;
+	color: #767676;
+	font-size: 11px;
+	text-align: center;
+	border: 1px solid #ccc;
+	display: inline-block;
+	line-height: 20px;
+	padding: 0 4px;
+	float: left;
+	background-color: #fafafa;
+	border-left: none;
+}
+
+.fa-youtube-play {
+	margin-right: 5px;
+	color: #fff;
+}
+
+.views {
+	display: inline-block;
+	float: right;
+	color: #666;
+	font-size: 19px;
+	position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid blue;
+    width: 100px;
+    text-align: right;
+}
+
+.views p {
+	margin: 0;
+}
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both
+}
+
+.action-bar {
+	margin-top: 10px;
+	margin-bottom: 10px;;
+}
+
+.actions {
+	display: inline-block;
+	width: 50%;
+	float: left;
+}
+
+.actions span {
+	margin-right: 10px;
+}
+
+.actions span i {
+	margin-right: 5px;
+	color: #767676;
+}
+
+.votes {
+	width: 50%;
+	float: right;
+}
+
+.votes div {
+	display: inline-block;
+	float: right;
+	margin-left: 10px;
+}
+
+.upvote, .downvote {
+	color: #767676;
+}
+
+.upvote a, .downvote a {
+	color: #000;
+	opacity: 0.5;
+}
+
+.upvote a:hover, .downvote a:hover {
+	opacity: 1;
+}
+.fa-plus, .fa-share-alt, .fa-ellipsis-h{
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
 /*
   Side
 */
