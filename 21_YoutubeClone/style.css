@@ -354,6 +354,31 @@ aside {
   width: 20px;
   height: 20px;
 }
+
+/*
+ Video Description
+*/
+.about-video {
+	padding: 10px;
+}
+
+.show-more-content-bar {
+	text-align: center;
+	border-top: 1px solid #ccc;
+	padding-top: 5px;
+	color: #767676;
+}
+.about-video-content{
+  margin: 10px 0;
+}
+.about-video-content p{
+  padding: 5px 0;
+}
+
+.about-video-content strong{
+  font-weight: bold;
+}
+
 /*
   Side
 */
