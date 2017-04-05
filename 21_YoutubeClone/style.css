@@ -380,6 +380,129 @@ aside {
 }
 
 /*
+  Comments
+*/
+.comments {
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.comments h3 {
+	color: #666;
+	font-weight: 500;
+  padding: 10px 0;
+}
+
+.post-comment img {
+	width: 47px;
+	height: 47px;
+	float: left;
+}
+
+.post-comment form {
+	float: left;
+	width: 80%;
+}
+
+.post-comment input {
+	width: 100%;
+	height: 47px;
+	margin-left: 5px;
+	outline: none;
+	padding: 5px;
+}
+
+.post-comment {
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.comments button {
+	background-color: #f8f8f8;
+	border: 1px solid #d3d3d3;
+	font-size: 11px;
+	height: 28px; 
+}
+
+.comments button i {
+	margin-left: 5px;
+	vertical-align: text-top;
+}
+
+.display-comments {
+	margin-top: 10px;
+	position: relative;
+}
+
+
+.user-avatar {
+	margin-right: 10px;
+	display: block;
+	float: left;
+	width: 50px;
+}
+
+.user-avatar img {
+	width: 48px;
+	height: 48px;
+}
+
+.comment-details {
+	margin-bottom: 5px;
+}
+
+.comment-details a {
+	color: #167ac6;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.comment-details span {
+	color: #767676;
+	margin-left: 5px;
+	font-size: 11px;
+}
+
+.comment-content {
+	margin-left: 60px;
+	margin-right: 10px;
+	margin-bottom: 30px;
+}
+
+.comment-content p {
+	margin: 0;
+}
+.comment-actions {
+	margin-top: 5px;
+}
+
+.reply {
+	color: #555;
+	opacity: 0.75;
+	font-size: 12px;
+	text-decoration: none;
+	margin-right: 5px;
+}
+
+.comment-actions i {
+	margin-right: 5px;
+	color: #000;
+	opacity: 0.3;
+}
+
+.comment-actions i:hover {
+	opacity: 1;
+}
+
+.icon-flipped {
+transform: scaleX(-1);
+-moz-transform: scaleX(-1);
+-webkit-transform: scaleX(-1);
+-ms-transform: scaleX(-1);
+}
+
+
+/*
   Side
 */
 
