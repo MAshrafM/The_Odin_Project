@@ -505,7 +505,125 @@ transform: scaleX(-1);
 /*
   Side
 */
+.aside-actions {
+	padding: 10px;
+}
 
+.aside-actions > p {
+	display: inline-block;
+	float: left;
+	margin: 0;
+}
+
+.autoplay-actions {
+	display: inline-block;
+	float: right;
+	color: #767676;
+}
+
+.autoplay-actions > p {
+	display: inline;
+	margin-right: 5px;
+}
+
+.autoplay-actions > .onoffswitch {
+	display: inline-block;
+	vertical-align: text-top;
+	margin-left: 5px;
+}
+
+.onoffswitch {
+    position: relative; width: 40px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 13px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 10px; padding: 0; line-height: 10px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+	font-family: FontAwesome;
+    content: "\f00c";
+    font-size: 10px;
+    padding-left: 12px;
+    background-color: #167AC6; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "";
+    padding-right: 12px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 19px; margin: -2.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 23px;
+    border: 2px solid #999999; border-radius: 13px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+.next-video img, .video-preview img {
+	width: 168px;
+	height: 94px;
+	display: inline-block;;
+	margin-right: 8px;
+	margin-left: 10px;
+	float: left;
+  background: transparent;
+}
+
+.video-details {
+	width: 50%;
+	display: inline-block;
+	height: 90px;
+}
+
+.video-details h4, .video-details p {
+	margin: 0;
+}
+
+.video-details h4 {
+	font-size: 13px;
+	font-weight: 500;
+	margin-bottom: 2px;
+} 
+
+.video-details p {
+	color: #767676;
+	font-size: 11px;
+}
+
+.next-video {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e2e2e2;
+	margin-bottom: 10px;
+}
+
+.video-preview {
+	margin-bottom: 10px;
+}
+
+aside {
+	padding: 5px;
+}
 /*
   Footer
 */
