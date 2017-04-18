@@ -56,10 +56,45 @@ html {
 }
 
 body{
-
+  font-family: 'Quattrocento Sans', sans-serif;
+	color: #333;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+/*
+  Content Wrapper
+*/
+.container-wrap{
+	width: 800px;
+	margin: 0 auto;
+	padding: 60px 0 0 0;
+}
+
+/*
+  Header
+*/
+
+header {
+	margin-bottom: 15px;
+	font-size: 16px;
+}
+header span {
+	display: inline-block;
+	width: 50%;
+}
+header span:last-child {
+	text-align: right;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+strong{
+  font-weight: bold;
 }
 
