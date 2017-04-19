@@ -98,3 +98,75 @@ strong{
   font-weight: bold;
 }
 
+/*
+  Main
+*/
+main {
+	box-shadow: 0 2px 7px #ccc;
+	box-sizing: border-box;
+	padding: 40px 25px 40px 40px;
+	overflow: auto;
+}
+
+/* 
+  Main Form 
+
+*/
+
+.main-form {
+	font-size: 14px; 
+}
+.main-form h1 {
+	font-weight: normal;
+	font-size: 230%;
+	line-height: 1.5;
+  padding-bottom: 20px;
+}
+.main-form label {
+	display: block;
+	margin-bottom: 20px;
+}
+.main-form input {
+	display: block;
+}
+.main-form input {
+	padding: 8px;
+	border-radius: 3px;
+	width: 300px;
+	border: 1px solid #ccc;
+	margin-bottom: 30px;
+}
+
+.main-form input[type=checkbox] {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	background-color: #fff;
+}
+.main-form label[for=remember] {
+	display: inline-block;
+	position: relative;
+	top: -5px;
+
+}
+.main-form input[type=submit] {
+	width: 100px;
+	color: #fff;
+	background-color: #45CAE6;
+	border: 0;
+	cursor: pointer;
+	background-image: url(https://accounts.intuit.com/IUS-Plugins/v2/images/icon-whitelock@3x.png);
+	background-repeat: no-repeat;
+	background-position: 15px 8px;
+	background-size: 10px;
+	margin-bottom: 10px;
+}
+.main-form .agree {
+	color: #888;
+	font-size: 90%;
+}
+.main-form .agree a {
+	color: #45CAE6;
+}
+
