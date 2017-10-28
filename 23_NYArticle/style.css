@@ -46,7 +46,7 @@ table {
 
 /* main css */
 
-
+/* General Style */
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -55,51 +55,186 @@ body {
     margin: 0;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  color: #000;
+  background-color: #fff;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
 .wrapper {
-    margin: 0 auto;
-    max-width: 1605px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+  margin: 0 auto;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  overflow-x: hidden;
+  width: 95%;
+}
+/* Header Navbar */
+.masthead{
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  padding: 0 5px 5px 5px;
 }
 
 .nav-bar {
-    height: 50px;
-    width: 100%;
-    max-width: 1604px;
-    position: fixed;
-    border-bottom: 1px solid black;
-    background-color: white; 
+  height: 50px;
+  width: 100%;
+  max-width: 1604px;
+  border-bottom: 1px solid #e2e2e2;
+  background-color: white; 
+  padding-top: 7px;
 }
 
-.btn-gp{
+#nav-button {
+  margin-left: -20px;
+  border: 1px solid #e2e2e2;
+}
+.btn-gp li{
   float: left;
 }
+
+.btn-gp button {
+  font-family: "nyt-franklin",arial,helvetica,sans-serif;
+  padding: 5px 15px;
+  font-size: 10px;
+  font-weight: 800;
+  background-color: #fff;
+  height: 28px;
+}
+.btn-gp button:hover{
+  background-color: #efeaea;
+}
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px; 
+  margin-right: 5px;
+}
+/* NAVBAR SPIRITE ICONS */
+#burger-icon {
+  background-image: url(./img/sprite-no-repeat.svg);
+  background-repeat: no-repeat;
+  background-position: -35px -243px;
+}
+#nyt-icon {
+  background-image: url(./img/sprite-no-repeat.svg);
+  background-repeat: no-repeat;
+  background-position: -136px -276px;
+}
+#search-icon {
+  background-image: url(./img/sprite-no-repeat.svg);
+  background-repeat: no-repeat;
+  background-position: -456px -210px;
+}
+#settings {
+  background-image: url(./img/sprite-no-repeat.svg);
+  background-repeat: no-repeat;
+  background-position: -86px -243px;
+}
+.nav-button-text {
+  display: inline-block;
+  vertical-align: top;
+}
+
 .utility-btn{
+  vertical-align: top;
+}
+.utility-btn li{
   float: right;
+  padding: 0 7px;
+}
+.utility-btn button {
+  font-family: "nyt-franklin", sans-serif;
+  padding: 9px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  border-radius: 3px;
+  background-color: #326891;
+  opacity: 0.7;
+}
+.utility-btn button:hover{
+  opacity: 1;
+}
+.utility-btn li:first-child{
+  padding-left: 0;
+}
+#settings-button {
+  padding: 6px;
+  background-color: #fff;
+  height: 28px;
+  width: 28px;
+  margin-right: 25px;
+}
+#settings-button:hover {
+  background-color: #efeaea;
 }
 .brand{
   float: left;
   width: 185px;
-  margin-left: 500px;
-  padding-top: 15px;
+  margin-left: 25%;
 }
 
-.article-title {
-    font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
-    font-style: italic;
-    font-size: 30px;
-    line-height: 38px;
-    font-weight: 700;
-    padding: 20px 0;
-    border-bottom: 1px solid black;
+.suggestions-bar {
+  height: 85px;
+  width: 100%;
+  border-bottom: 1px solid #e2e2e2;;
+  overflow: hidden;
+  background-color: #fff;
+}
+  
+.story-links li {
+  display: flex;
+  float: left;
+  width: 16.4%;
+  border-right: 1px solid #e2e2e2;
+}
+.story-links li:nth-child(6) {
+  border-right: none;
+  vertical-align: top
+}
+.thumbnail {
+  float: left;
+  padding: 7px;
+}
+.thumbnail img {
+  width: 65px;
+}
+
+.story-title {
+  font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
+  font-size: 13px;
+  line-height: 1.25;
+  padding: 15px 8px;
+  color: #000;
+  position: relative;
+  overflow: hidden;
 }
 
 
+/* Main Section style */
+main {
+  padding-top: 50px;
+  width: 1125px;
+  margin: 0 auto;
+}
+
+.main-image-holder {
+  background: url(https://static01.nyt.com/images/2014/03/18/science/space/18cosmos/18cosmos-superJumbo.jpg);
+  background-size: 100%;
+  height: 625px;
+}
 
 .article-para {
-    margin: 20px 60px;
-    font-size: 17px;
-    font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
+  margin: 20px 60px;
+  font-size: 17px;
+  font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
 }
 
 .comments-preview {
@@ -108,14 +243,12 @@ body {
   float: right;
 }
 
-main {
-    padding-top: 50px;
-    width: 1125px;
-    margin: 0 auto;
-}
-
-.main-image-holder {
-    background: url(https://static01.nyt.com/images/2014/03/18/science/space/18cosmos/18cosmos-superJumbo.jpg);
-    background-size: 100%;
-    height: 625px;
+.article-title {
+  font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 700;
+  padding: 20px 0;
+  border-bottom: 1px solid black;
 }
