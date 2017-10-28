@@ -220,9 +220,112 @@ a{
 
 /* Main Section style */
 main {
-  padding-top: 50px;
+  padding-top: 150px;
   width: 1125px;
   margin: 0 auto;
+}
+
+/** article meta **/
+.section-title {
+   padding: 10px 0;
+   font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
+   font-size: 12px;
+   font-weight: 700;
+   border-top: 1px solid black;
+}
+.article-title {
+  font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 700;
+  padding: 20px 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+.meta-container{
+  height: 50px;
+  padding-top: 18px;
+  position: relative;
+}
+.article-info{
+  display: flex;
+  font-size: 12px;
+  padding-right: 10px;
+}
+.share-buttons{
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+.border-before{
+  padding-left: 10px;
+  border-left: 1px solid #e2e2e2;
+}
+.sm-links li{
+  float: left;
+  margin: 0 5px;
+}
+.sm-links button{
+  width: 25px;
+  height: 25px;
+}
+.circle-button{
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+/*** social icons ***/
+#facebook {
+  display: block;
+  background-image: url(./img/sprite-no-repeat.svg);
+  background-repeat: no-repeat;
+  background-position: -66px -54px;
+}
+
+#twitter {
+  display: block;
+  background-image: url(./img/sprite-no-repeat.svg);
+  background-repeat: no-repeat;
+  background-position: -129px -297px;
+}
+
+#email {
+  display: block;
+  background-image: url(./img/sprite-no-repeat.svg);
+  background-repeat: no-repeat;
+  background-position: -152px -21px;
+}
+
+#showall {
+  display: block;
+  background-image: url(./img/sprite-no-repeat.svg);
+  background-repeat: no-repeat;
+  background-position: -346px -243px;
+}
+
+#save {
+  display: block;
+  background-image: url(./img/sprite-no-repeat.svg);
+  background-repeat: no-repeat;
+  background-position: -405px -210px;
+  width: 16px;
+  height: 25px;
+  padding-left: 10px;
+}
+
+#comments-link {
+   display: block;
+   position: absolute;
+   top: 0;
+   border: 1px solid #333;
+   width: 30px;
+   height: 20px;
+   border-radius: 3px;
+}
+#comments-link:after{
+  content: '';
+  
 }
 
 .main-image-holder {
@@ -243,12 +346,3 @@ main {
   float: right;
 }
 
-.article-title {
-  font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
-  font-style: italic;
-  font-size: 30px;
-  line-height: 38px;
-  font-weight: 700;
-  padding: 20px 0;
-  border-bottom: 1px solid black;
-}
