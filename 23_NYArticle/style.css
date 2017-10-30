@@ -560,7 +560,7 @@ main {
   margin-top: 10px;
 }
 /** More Stories **/
-.more-story{
+.more-story, .rec-story{
   border-top: 1px solid #ccc;
   padding-top: 5px;
   width: 705px;
@@ -568,20 +568,21 @@ main {
   margin-top: 30px;
   margin-right: 20px;
 }
-.m-header{
+.m-header, .r-header{
   font-weight: 700;
   font-family: "nyt-franklin",arial,helvetica,sans-serif;
   font-size: 16px;
   padding: 5px 0;
   float: left;
 }
-.m-link{
+.m-link, .r-link{
   float: right;
   padding: 5px 0;
   font-family: "nyt-franklin",arial,helvetica,sans-serif;
   font-size: 11px;
+  color: #879cb4;
 }
-.m-container{
+.m-container, .r-container{
   height: 480px;
   clear: both;
 }
@@ -604,4 +605,20 @@ main {
 }
 .s1 p:hover{
   text-decoration: underline;
+}
+#r-main h2{
+  font-size: 1.5rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
+}
+#r-main a{
+  color: #333;
+}
+#r-main a:hover{
+  text-decoration: underline;
+}
+#r-main p:hover{
+  text-decoration: none!important;
 }
