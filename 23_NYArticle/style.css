@@ -227,7 +227,10 @@ main {
   width: 1125px;
   margin: 0 auto;
 }
-
+.main-bt{
+  width: 100%;
+  min-height: 700px;
+}
 /** article meta **/
 .section-title {
    padding: 10px 0;
@@ -560,12 +563,16 @@ main {
   margin-top: 10px;
 }
 /** More Stories **/
+#story{
+  width: 705px;
+  float: left;
+}
 .more-story, .rec-story{
   border-top: 1px solid #ccc;
   padding-top: 5px;
+  margin-top: 30px;
   width: 705px;
   float: left;
-  margin-top: 30px;
   margin-right: 20px;
 }
 .m-header, .r-header{
@@ -606,6 +613,7 @@ main {
 .s1 p:hover{
   text-decoration: underline;
 }
+/** recommended **/
 #r-main h2{
   font-size: 1.5rem;
   line-height: 1.625rem;
@@ -621,4 +629,52 @@ main {
 }
 #r-main p:hover{
   text-decoration: none!important;
+}
+/** trending **/
+.trend{
+  border-top: 1px solid #ccc;
+  padding-top: 5px;
+  float: right;
+  margin-top: 30px;
+  width: 360px;
+}
+.t-header{
+  font-weight: 700;
+  font-family: "nyt-franklin",arial,helvetica,sans-serif;
+  font-size: 11px;
+  padding: 5px 0 15px 0;
+}
+.t-list{
+  counter-reset: li;
+}
+.t-list li{
+  height: 52px;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 6px 0 6px 3px;
+}
+.t-list li:before{
+  counter-increment: li;
+  content: counter(li) ".";
+  float: left;
+  padding-top: 10px;
+  padding-right: 8px;
+  font-size: 18px;
+}
+.t-line{
+  padding-top: 5px;
+  padding-right: 5px;
+  width: 285px;
+  float: right;
+  color: #326891;
+}
+.t-list li>a>p:hover{
+  text-decoration: underline;
+}
+.t-thumb{
+  height: 40px;
+  width: 40px;
+  float: right;
+}
+.t-list li > a {
+  color: #333;
 }
