@@ -774,3 +774,33 @@ footer{
 #crossword {
     background-position: -375px 0;
 }
+
+.sm-footer{
+  clear: both;
+  width: 100%;
+  height: unset;
+  padding-top: 10px;
+}
+.smf-links li{
+  float: left;
+  font-size: 10.5px;
+  padding-right: 5px;
+  margin-right: 5px;
+  border-right: 1px solid #e2e2e2;
+  letter-spacing: 0.001em
+}
+.smf-links li:last-child{
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
+}
+.smf-links a{
+  color: #999;
+  font-family: "nyt-franklin",arial,helvetica,sans-serif;
+}
+.smf-links a:hover{
+  text-decoration: underline; 
+}
+.site-admin-links {
+  float: right;
+}
